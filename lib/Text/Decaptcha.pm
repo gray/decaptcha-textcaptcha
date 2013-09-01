@@ -164,24 +164,16 @@ sub decaptcha {
     ) {
         return first { $body_part{$_} } split /(?:,\s*| or )/, $1;
     }
-    if ($lq =~ /^which of (.*?) is part of the head\?$/
-        or $lq =~ /^(.*?): which is part of the head\?$/
-    ) {
+    if ($lq =~ /^(.*?) is part of the head\?$/) {
         return first { $head_part{$_} } split /\W+/, $1;
     }
-    if ($lq =~ /^which of (.*?) is something each person has more than one of\?$/
-        or $lq =~ /^(.*?): which is something each person has more than one of\?$/
-    ) {
+    if ($lq =~ /^(.*?) is something each person has more than one of\?$/) {
         return first { $multiple_part{$_} } split /\W+/, $1;
     }
-    if ($lq =~ /^which of (.*?) is above the waist\?$/
-        or $lq =~ /^(.*?): which is above the waist\?$/
-    ) {
+    if ($lq =~ /^(.*?) is above the waist\?$/) {
         return first { $part_above_waist{$_} } split /\W+/, $1;
     }
-    if ($lq =~ /^which of (.*?) is below the waist\?$/
-        or $lq =~ /^(.*?): which is below the waist\?$/
-    ) {
+    if ($lq =~ /^(.*?) is below the waist\?$/) {
         return first { $part_below_waist{$_} } split /\W+/, $1;
     }
 
@@ -266,7 +258,7 @@ L<http://textcaptcha.com/>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2012 gray <gray at cpan.org>, all rights reserved.
+Copyright (C) 2013 gray <gray at cpan.org>, all rights reserved.
 
 This library is free software; you can redistribute it and/or modify it under
 the same terms as Perl itself.
