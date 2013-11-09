@@ -39,7 +39,7 @@ my %weekend = map { $_ => 1 } @days[0,6];
 
 
 sub decaptcha {
-    my $q = shift;
+    my $q = shift or return;
     my $lq = lc $q;
 
     # Words and letters

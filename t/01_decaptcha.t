@@ -5,6 +5,7 @@ use Text::Decaptcha;
 
 ok defined &decaptcha, 'decaptcha() is exported';
 
+is decaptcha(undef), undef, undef;
 while (my $line = <DATA>) {
     chomp $line;
     next unless $line;
@@ -113,6 +114,7 @@ Twenty seven, fifty two, 41 or 94: which of these is the lowest?|27
 10 plus two is what?|12
 14 minus 1 = ?|13
 
+|
 Which word in this sentence is all in capitals?|
 The word in capitals from constrict, ginormous, nail or slunk is?|
 Which word starts with "h" from the list: quack, cacti, moon?|
