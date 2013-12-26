@@ -4,20 +4,20 @@ use warnings;
 use ExtUtils::MakeMaker;
 
 my %conf = (
-    NAME           => 'Text::Decaptcha',
+    NAME           => 'Decaptcha::TextCaptcha',
     AUTHOR         => 'gray <gray@cpan.org>',
     LICENSE        => 'perl',
-    VERSION_FROM   => 'lib/Text/Decaptcha.pm',
-    ABSTRACT_FROM  => 'lib/Text/Decaptcha.pm',
+    VERSION_FROM   => 'lib/Decaptcha/TextCaptcha.pm',
+    ABSTRACT_FROM  => 'lib/Decaptcha/TextCaptcha.pm',
     PREREQ_PM      => { 'Lingua::EN::Words2Nums' => 0 },
     BUILD_REQUIRES => { 'Test::More' => 0.98, },
     META_MERGE     => {
         resources =>  {
-            repository => 'https://github.com/gray/text-decaptcha',
+            repository => 'https://github.com/gray/decaptcha-textcaptcha',
         },
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean => { FILES    => 'Text-Decaptcha-*' },
+    clean => { FILES    => 'Decaptcha-TextCaptcha-*' },
 );
 
 my $eumm_version =  do {

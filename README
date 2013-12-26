@@ -1,7 +1,7 @@
-Text-Decaptcha
-==============
+Decaptcha-TextCaptcha
+=====================
 
-Text::Decaptcha - solve text captchas from textcaptcha.com
+Decaptcha::TextCaptcha - solve text captchas from textcaptcha.com
 
 INSTALLATION
 

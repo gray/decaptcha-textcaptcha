@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Test::More;
-use Text::Decaptcha;
+use Decaptcha::TextCaptcha;
 
 ok defined &decaptcha, 'decaptcha() is exported';
 

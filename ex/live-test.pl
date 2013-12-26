@@ -7,8 +7,9 @@ use Data::Printer;
 use Digest::MD5 qw(md5_hex);
 use HTML::Entities;
 use LWP::UserAgent::Determined;
+
 use lib 'lib';
-use Text::Decaptcha;
+use Decaptcha::TextCaptcha;
 
 my $key = shift or die 'missing api key';
 

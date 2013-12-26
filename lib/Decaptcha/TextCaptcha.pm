@@ -1,4 +1,4 @@
-package Text::Decaptcha;
+package Decaptcha::TextCaptcha;
 
 use 5.010;
 use strict;
@@ -234,11 +234,11 @@ __END__
 
 =head1 NAME
 
-Text::Decaptcha - solve captchas from textcaptcha.com
+Decaptcha::TextCaptcha - solve captchas from textcaptcha.com
 
 =head1 SYNOPSIS
 
-    use Text::Decaptcha;
+    use Decaptcha::TextCaptcha;
 
     my $answer = decaptcha $question;
 
