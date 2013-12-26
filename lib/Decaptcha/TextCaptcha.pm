@@ -256,6 +256,45 @@ Given a question provided by textcaptcha.com, returns the answer or undef.
 
 L<http://textcaptcha.com/>
 
+=head1 REQUESTS AND BUGS
+
+Please report any bugs or feature requests to
+L<http://rt.cpan.org/Public/Bug/Report.html?Queue=Decaptcha-TextCaptcha>.
+I will be notified, and then you'll automatically be notified of progress on
+your bug as I make changes.
+
+=head1 SUPPORT
+
+You can find documentation for this module with the perldoc command.
+
+    perldoc Decaptcha::TextCaptcha
+
+You can also look for information at:
+
+=over
+
+=item * GitHub Source Repository
+
+L<http://github.com/gray/decaptcha-textcaptcha>
+
+=item * AnnoCPAN: Annotated CPAN documentation
+
+L<http://annocpan.org/dist/Decaptcha-TextCaptcha>
+
+=item * CPAN Ratings
+
+L<http://cpanratings.perl.org/d/Decaptcha-TextCaptcha>
+
+=item * RT: CPAN's request tracker
+
+L<http://rt.cpan.org/Public/Dist/Display.html?Name=Decaptcha-TextCaptcha>
+
+=item * Search CPAN
+
+L<http://search.cpan.org/dist/Decaptcha-TextCaptcha/>
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
 Copyright (C) 2013 gray <gray at cpan.org>, all rights reserved.
