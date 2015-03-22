@@ -1,18 +1,21 @@
-use 5.010;
 use strict;
 use warnings;
-use ExtUtils::MakeMaker;
+
+# MIN_PERL_VERSION needs 6.48, and CONFIGURE_REQUIRES needs 6.52.
+use ExtUtils::MakeMaker 6.52;
 
 my %conf = (
-    NAME           => 'Decaptcha::TextCaptcha',
-    AUTHOR         => 'gray <gray@cpan.org>',
-    LICENSE        => 'perl',
-    VERSION_FROM   => 'lib/Decaptcha/TextCaptcha.pm',
-    ABSTRACT_FROM  => 'lib/Decaptcha/TextCaptcha.pm',
-    PREREQ_PM      => { 'Lingua::EN::Words2Nums' => 0 },
-    BUILD_REQUIRES => { 'Test::More' => 0.98, },
-    META_MERGE     => {
-        resources =>  {
+    NAME               => 'Decaptcha::TextCaptcha',
+    AUTHOR             => 'gray <gray@cpan.org>',
+    LICENSE            => 'perl',
+    VERSION_FROM       => 'lib/Decaptcha/TextCaptcha.pm',
+    ABSTRACT_FROM      => 'lib/Decaptcha/TextCaptcha.pm',
+    CONFIGURE_REQUIRES => { 'ExtUtils::MakeMaker' => 6.52, },
+    PREREQ_PM          => { 'Lingua::EN::Words2Nums' => 0 },
+    MIN_PERL_VERSION   => '5.010',
+    BUILD_REQUIRES     => { 'Test::More' => 0.98, },
+    META_MERGE         => {
+        resources => {
             repository => 'https://github.com/gray/decaptcha-textcaptcha',
         },
     },
@@ -24,7 +27,6 @@ my $eumm_version =  do {
     no warnings 'numeric';
     eval $ExtUtils::MakeMaker::VERSION;
 };
-delete $conf{META_MERGE} if $eumm_version < 6.46;
 $conf{PREREQ_PM} = {
     %{ $conf{PREREQ_PM} || {} }, %{ delete $conf{BUILD_REQUIRES} },
 } if ($conf{BUILD_REQUIRES} and $eumm_version < 6.5503);
