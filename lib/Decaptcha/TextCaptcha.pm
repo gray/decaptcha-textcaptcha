@@ -63,7 +63,7 @@ sub decaptcha {
         or $lq =~ /which word from list "(?<l>.*?)" has "(?<c>.)" as a first letter\?$/
         or $lq =~ /^what word from "(?<l>.*?)" begins with "(?<c>.)"\?$/
         or $lq =~ /^(?<l>.*?): the word starting with "(?<c>.)" is\?$/
-    ){
+    ) {
         return first { $+{c} eq substr $_, 0, 1 } split /,\s*/, $+{l};
     }
     if ($lq =~ /^which word contains "(?<c>[a-z])" from the list: (?<l>.*?)\?$/
