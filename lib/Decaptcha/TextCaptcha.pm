@@ -8,7 +8,7 @@ use Exporter qw(import);
 use Lingua::EN::Words2Nums;
 use List::Util qw(first max min);
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 $VERSION = eval $VERSION;
 
 our @EXPORT = qw(decaptcha);
